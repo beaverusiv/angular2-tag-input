@@ -1,0 +1,16 @@
+rl-tag-input {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    box-shadow: 0 1px #ccc;
+    will-change: box-shadow;
+    transition: box-shadow 0.12s ease-out;
+}
+
+rl-tag-input .ng2-tag-input-field {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+rl-tag-input.ng2-tag-input-focus {
+    box-shadow: 0 2px #0d8bff;
+}
