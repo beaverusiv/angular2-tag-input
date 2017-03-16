@@ -1,0 +1,49 @@
+rl-tag-input {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    box-shadow: 0 1px #ccc;
+    will-change: box-shadow;
+    transition: box-shadow 0.12s ease-out;
+}
+
+rl-tag-input .ng2-tag-input-field {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+rl-tag-input.ng2-tag-input-focus {
+    box-shadow: 0 2px #0d8bff;
+}
+
+rl-tag-input-autocomplete {
+     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+     font-family: "Roboto", "Helvetica Neue", sans-serif;
+     font-size: 16px;
+     color: #444444;
+ }
+
+rl-tag-input-autocomplete .is-selected {
+    background: #eeeeee;
+}
+
+rl-tag-input-item {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    background: #e0e0e0;
+    transition: all 0.12s ease-out;
+}
+
+rl-tag-input-item .ng2-tag-input-remove {
+    background: #a6a6a6;
+    color: #e0e0e0;
+    font-size: 17px;
+}
+
+rl-tag-input-item.ng2-tag-input-item-selected {
+    color: white;
+}
+
+rl-tag-input-item.ng2-tag-input-item-selected .ng2-tag-input-remove {
+    background: white;
+    color: #0d8bff;
+}

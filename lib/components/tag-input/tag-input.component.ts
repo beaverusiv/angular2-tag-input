@@ -61,13 +61,8 @@ export interface AutoCompleteItem {
   `,
   styles: [`
     :host {
-      font-family: "Roboto", "Helvetica Neue", sans-serif;
-      font-size: 16px;
       display: block;
-      box-shadow: 0 1px #ccc;
       padding: 8px 0 6px 0;
-      will-change: box-shadow;
-      transition: box-shadow 0.12s ease-out;
     }
 
      :host .ng2-tag-input-form {
@@ -75,8 +70,6 @@ export interface AutoCompleteItem {
     }
 
      :host .ng2-tag-input-field {
-      font-family: "Roboto", "Helvetica Neue", sans-serif;
-      font-size: 16px;
       display: inline-block;
       width: auto;
       box-shadow: none;
@@ -91,10 +84,6 @@ export interface AutoCompleteItem {
      :host .rl-tag-input-autocomplete-container {
       position: relative;
       z-index: 10;
-    }
-
-    :host.ng2-tag-input-focus {
-      box-shadow: 0 2px #0d8bff;
     }
   `],
   providers: [
@@ -325,6 +314,8 @@ export class TagInputComponent implements ControlValueAccessor, OnDestroy, OnIni
   }
 
   ngOnDestroy() {
-    this.tagInputSubscription.unsubscribe();
+    if (this.tagInputSubscription) {
+      this.tagInputSubscription.unsubscribe();
+    }
   }
 }
