@@ -11,6 +11,7 @@ import { KEYS } from '../../shared/tag-input-keys';
       *ngFor="let item of items; let itemIndex = index"
       [ngClass]="{ 'is-selected': selectedItemIndex === itemIndex }"
       (mousedown)="selectItem(itemIndex)"
+      (mouseover)="handleMouseHover(itemIndex)"
       class="rl-autocomplete-item">
       {{item}}
     </div>
@@ -147,6 +148,11 @@ export class TagInputAutocompleteComponent implements OnChanges, OnDestroy, OnIn
         return false;
     }
     this.goToNext();
+  }
+
+  handleMouseHover(index: number): void {
+    this.selectedItemIndex = index;
+    this.ensureHighlightVisible();
   }
 
   selectItem(itemIndex?: number): void {
